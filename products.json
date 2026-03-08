@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "name": "Set de Botones Vintage",
+        "category": "Botones",
+        "price": 15.50,
+        "image": "https://images.unsplash.com/photo-1544498522-0d2d38ff0b91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "description": "Hermoso set de 50 botones vintage ideales para dar un toque clásico y elegante a tus prendas. Variedad de tamaños y colores envejecidos."
+    },
+    {
+        "id": 2,
+        "name": "Tijeras de Costura Premium",
+        "category": "Tijeras",
+        "price": 45.00,
+        "image": "https://images.unsplash.com/photo-1509191436522-d296cf87d248?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "description": "Tijeras profesionales de acero inoxidable con mango ergonómico. Corte preciso, ideales para telas gruesas y finas."
+    },
+    {
+        "id": 3,
+        "name": "Agujas para Máquina (Pack de 10)",
+        "category": "Agujas",
+        "price": 8.00,
+        "image": "https://images.unsplash.com/photo-1616035824962-d46e3776d6ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "description": "Set de 10 agujas universales para máquina de coser. Resistentes y duraderas, aptas para todo tipo de telas convencionales."
+    },
+    {
+        "id": 4,
+        "name": "Cinta Métrica Enrollable",
+        "category": "Accesorios",
+        "price": 5.50,
+        "image": "https://images.unsplash.com/photo-1649174033705-cb6d2263dae2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "description": "Cinta métrica flexible de 150 cm con botón retráctil. Perfecta para tomar medidas rápidas y precisas. No se deforma."
+    },
+    {
+        "id": 5,
+        "name": "Tiza de Sastre Colores Pastel",
+        "category": "Accesorios",
+        "price": 4.20,
+        "image": "https://images.unsplash.com/photo-1459419163273-030ebf0f9b6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "description": "Set de 4 tizas de sastre en colores suaves. Marcan claramente y se borran fácilmente sin dejar rastro en la tela."
+    },
+    {
+        "id": 6,
+        "name": "Elástico Blanco 2cm (Rollo 10m)",
+        "category": "Elásticos",
+        "price": 12.00,
+        "image": "https://images.unsplash.com/photo-1596489397635-c3f25c276378?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "description": "Rollo de elástico resistente y suave de 2 cm de ancho. Ideal para cinturillas, puños y manualidades."
+    },
+    {
+        "id": 7,
+        "name": "Cinta Satinada Azul Marca",
+        "category": "Cintas",
+        "price": 7.80,
+        "image": "https://images.unsplash.com/photo-1582239493542-f222efbf5fdf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "description": "Cinta satinada de alta calidad, color azul corporativo. Perfecta para lazos, decoraciones y acabados elegantes."
+    },
+    {
+        "id": 8,
+        "name": "Alfileres con Cabeza de Perla",
+        "category": "Agujas",
+        "price": 6.50,
+        "image": "https://images.unsplash.com/photo-1590240974415-38c4b28328fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "description": "Caja con 100 alfileres de acero con cabeza en forma de perla. Fáciles de manipular y muy decorativos."
+    }
+]

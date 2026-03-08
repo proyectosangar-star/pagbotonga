@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botonga | Insumos para confección y mercería</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo-container">
+                <img src="https://res.cloudinary.com/dl3jtre1k/image/upload/v1772944646/Logo-botonga-presentaciones-5_rsgyxe.png" alt="Botonga Logo" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#catalogue">Productos</a></li>
+                <li><a href="#categories">Categorías</a></li>
+                <li><a href="#footer">Contacto</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="icon-btn cart-btn" id="cart-toggle" aria-label="Open cart">
+                    <i class="fa-solid fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <!-- Mobile Menu Toggle -->
+                <button class="icon-btn mobile-toggle" id="mobile-toggle" aria-label="Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <ul>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#catalogue">Productos</a></li>
+                <li><a href="#categories">Categorías</a></li>
+                <li><a href="#footer">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Side Cart -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="side-cart" id="side-cart">
+        <div class="cart-header">
+            <h2>Tu Carrito</h2>
+            <button class="close-btn" id="close-cart"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items-container">
+            <!-- Items injected via JS -->
+            <p class="empty-cart-msg">Tu carrito está vacío.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <button class="btn btn-primary btn-block">Proceder al pago</button>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="product-modal">
+            <button class="close-btn" id="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-content" id="modal-content">
+                <!-- Data injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero fade-in">
+            <div class="hero-carousel" id="hero-carousel">
+                <div class="carousel-slide active" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1558066556-9d32d6fe026e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+                <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+                <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1544498522-0d2d38ff0b91?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">Todo para la confección en un solo lugar</h1>
+                <p class="hero-subtitle">Encuentra los mejores insumos para costura y diseño.</p>
+                <div class="hero-buttons">
+                    <a href="#catalogue" class="btn btn-primary">Ver catálogo</a>
+                    <a href="#categories" class="btn btn-secondary">Explorar productos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beneficios -->
+        <section class="benefits bg-light fade-in">
+            <div class="container">
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon"><i class="fa-solid fa-check-circle"></i></div>
+                        <h3>Productos de calidad</h3>
+                        <p>Seleccionamos cuidadosamente nuestros materiales.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon"><i class="fa-solid fa-layer-group"></i></div>
+                        <h3>Gran variedad</h3>
+                        <p>Insumos de todos los tipos y colores.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon"><i class="fa-solid fa-box-open"></i></div>
+                        <h3>Envíos rápidos</h3>
+                        <p>Despachamos tus pedidos con agilidad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section id="categories" class="categories container fade-in">
+            <h2 class="section-title">Nuestras Categorías</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-category="Botones">
+                    <img src="https://images.unsplash.com/photo-1544498522-0d2d38ff0b91?auto=format&fit=crop&w=400&q=80" alt="Botones">
+                    <div class="category-overlay">
+                        <h3>Botones</h3>
+                    </div>
+                </div>
+                <div class="category-card" data-category="Tijeras">
+                    <img src="https://images.unsplash.com/photo-1509191436522-d296cf87d248?auto=format&fit=crop&w=400&q=80" alt="Tijeras">
+                    <div class="category-overlay">
+                        <h3>Tijeras</h3>
+                    </div>
+                </div>
+                <div class="category-card" data-category="Agujas">
+                    <img src="https://images.unsplash.com/photo-1616035824962-d46e3776d6ec?auto=format&fit=crop&w=400&q=80" alt="Agujas">
+                    <div class="category-overlay">
+                        <h3>Agujas</h3>
+                    </div>
+                </div>
+                <div class="category-card" data-category="Cintas">
+                    <img src="https://images.unsplash.com/photo-1582239493542-f222efbf5fdf?auto=format&fit=crop&w=400&q=80" alt="Cintas">
+                    <div class="category-overlay">
+                        <h3>Cintas</h3>
+                    </div>
+                </div>
+                <div class="category-card" data-category="Elásticos">
+                    <img src="https://images.unsplash.com/photo-1596489397635-c3f25c276378?auto=format&fit=crop&w=400&q=80" alt="Elásticos">
+                    <div class="category-overlay">
+                        <h3>Elásticos</h3>
+                    </div>
+                </div>
+                <div class="category-card" data-category="Accesorios">
+                    <img src="https://images.unsplash.com/photo-1459419163273-030ebf0f9b6c?auto=format&fit=crop&w=400&q=80" alt="Accesorios">
+                    <div class="category-overlay">
+                        <h3>Accesorios</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catalogue -->
+        <section id="catalogue" class="catalogue container fade-in">
+            <h2 class="section-title">Catálogo de Productos</h2>
+            
+            <div class="catalogue-filters">
+                <div class="search-bar">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" id="search-input" placeholder="Buscar productos...">
+                </div>
+                <div class="filter-controls">
+                    <select id="category-filter">
+                        <option value="all">Todas las categorías</option>
+                        <option value="Botones">Botones</option>
+                        <option value="Tijeras">Tijeras</option>
+                        <option value="Agujas">Agujas</option>
+                        <option value="Cintas">Cintas</option>
+                        <option value="Elásticos">Elásticos</option>
+                        <option value="Accesorios">Accesorios</option>
+                    </select>
+                    <select id="sort-filter">
+                        <option value="default">Relevancia</option>
+                        <option value="price-asc">Precio: Menor a Mayor</option>
+                        <option value="price-desc">Precio: Mayor a Menor</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="products-grid" id="products-grid">
+                <!-- Products injected via JS -->
+                <div class="loader" id="products-loader"></div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section fade-in">
+            <div class="container text-center">
+                <h2>Explora todo nuestro catálogo de productos para confección.</h2>
+                <a href="#catalogue" class="btn btn-primary btn-lg mt-4">Ver catálogo completo</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating Chat -->
+    <div class="chat-container" id="chat-container">
+        <button class="chat-btn" id="chat-toggle">
+            <i class="fa-solid fa-comment-dots"></i>
+        </button>
+        <div class="chat-panel" id="chat-panel">
+            <div class="chat-header">
+                <h3>Soporte Botonga</h3>
+                <button id="close-chat" class="close-btn-small"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message incoming">
+                    <p>Hola 👋<br>Bienvenido a Botonga<br>¿En qué podemos ayudarte?</p>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chat-input-text" placeholder="Escribe tu mensaje...">
+                <button id="send-chat" class="icon-btn-small"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="https://res.cloudinary.com/dl3jtre1k/image/upload/v1772944646/Logo-botonga-presentaciones-5_rsgyxe.png" alt="Botonga Logo" class="footer-logo">
+                <p>Botonga — Insumos para confección y mercería.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#catalogue">Catálogo</a></li>
+                    <li><a href="#categories">Categorías</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <p><i class="fa-solid fa-envelope"></i> hola@botonga.com</p>
+                <p><i class="fa-solid fa-phone"></i> +1 234 567 890</p>
+            </div>
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Botonga. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
