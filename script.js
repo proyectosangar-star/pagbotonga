@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileToggle = document.getElementById('mobile-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     const themeToggle = document.getElementById('theme-toggle');
-    
+
     const cartToggle = document.getElementById('cart-toggle');
     const closeCart = document.getElementById('close-cart');
     const cartOverlay = document.getElementById('cart-overlay');
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Theme Toggle ---
     // Check initial preference from localStorage or OS
     const initialTheme = localStorage.getItem('botonga_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    
+
     if (initialTheme === 'dark') {
         document.body.classList.add('dark-mode');
         themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         products.forEach(product => {
             const card = document.createElement('div');
             card.className = 'product-card fade-in visible'; // Immediately visible when added
-            
+
             card.innerHTML = `
                 <div class="product-img-wrapper" data-id="${product.id}">
                     <img src="${product.image}" alt="${product.name}" class="product-img" loading="lazy">
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateCartUI() {
         const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
         cartCount.textContent = totalItems;
-        
+
         // Hide/show cart count depending on amount
         cartCount.style.display = totalItems > 0 ? 'flex' : 'none';
 
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             cart.push({ ...product, quantity: 1 });
         }
-        
+
         updateCartUI();
         openCartSidebar();
     }
@@ -309,42 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target === modalOverlay) closeProductModal();
     });
 
-    // --- Chat Logic ---
-    chatToggle.addEventListener('click', () => {
-        chatPanel.classList.toggle('active');
-    });
-
-    closeChat.addEventListener('click', () => {
-        chatPanel.classList.remove('active');
-    });
-
-    function sendChatMessage() {
-        const text = chatInputText.value.trim();
-        if (!text) return;
-
-        // User message
-        const userMsg = document.createElement('div');
-        userMsg.className = 'message outgoing';
-        userMsg.innerHTML = `<p>${text}</p>`;
-        chatMessages.appendChild(userMsg);
-        
-        chatInputText.value = '';
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-
-        // Bot response simulation delay
-        setTimeout(() => {
-            const botMsg = document.createElement('div');
-            botMsg.className = 'message incoming';
-            botMsg.innerHTML = `<p>Gracias por contactarnos. Un agente de Botonga revisará tu mensaje pronto.</p>`;
-            chatMessages.appendChild(botMsg);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }, 1000);
-    }
-
-    sendChatBtn.addEventListener('click', sendChatMessage);
-    chatInputText.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') sendChatMessage();
-    });
+    // Chatbase handled externally
 
     // --- Hero Carousel Auto Slide ---
     const slides = document.querySelectorAll('.carousel-slide');
